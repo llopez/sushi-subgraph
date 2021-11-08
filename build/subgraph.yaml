@@ -1,6 +1,6 @@
 specVersion: 0.0.2
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: SushiV2Factory
@@ -17,8 +17,8 @@ dataSources:
         - PairCreated
       abis:
         - name: SushiV2Factory
-          file: ./abis/SushiV2Factory.json
+          file: SushiV2Factory/abis/SushiV2Factory.json
       eventHandlers:
         - event: PairCreated(indexed address,indexed address,address,uint256)
           handler: handlePairCreated
-      file: ./src/mapping.ts
+      file: SushiV2Factory/SushiV2Factory.wasm
